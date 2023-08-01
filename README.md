@@ -1,0 +1,1 @@
+This is a reponsive one page portfolio website of Ogbaje Leo Arome built using HTML and Tailwind CSS. 
