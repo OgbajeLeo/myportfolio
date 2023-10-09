@@ -10,6 +10,7 @@
     <link rel="icon" sizes="32x32" href="./img/favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="antialiased relative text-gray-600 bg-gray-300">
@@ -55,7 +56,7 @@
     </header>
     
 <!-- --------------------------------------------Hero Section--------------------------------------------------------------  -->
-    <section id="Hero" class="relative z-0 flex min-h-screen h-4xl justify-center items-center">
+    <section id="Hero" class="relative z-0 flex min-h-screen h-4xl justify-center items-center" data-aos="flip-left">
         <div class="relative max-w-4xl">
             <div
                 class="absolute z-10 inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
@@ -101,11 +102,11 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center justify-center md:justify-between">
                 <!-- Profile Picture -->
-                <img class="hidden md:block w-80 h-90 rounded-3xl mb-6 md:mb-0" src="./img/AboutIMG.jpg"
-                    alt="Ogbaje Pics">
+                <img class="hidden md:block w-80 h-90 rounded-3xl mb-6 md:mb-0 transition-transform duration-200 transform hover:translate-x-9" src="./img/AboutIMG.jpg"
+                    alt="Ogbaje Pics" data-aos="fade-up">
 
                 <!-- About Content -->
-                <div class="md:w-3/5 md:pl-2">
+                <div class="md:w-3/5 md:pl-2" data-aos="fade-up-left">
                     <h1 class="text-6xl font-bold text-gray-800 py-5">About LEO</h1>
 
                     <p class="text-gray-700 leading-loose text-justify">I am Ogbaje Leo Arome, a passionate and creative
@@ -125,7 +126,9 @@
                         of the web. I believe that
                     <blockquote> "Success is stumbling from failure to failure with no loss of
                         enthusiasm."</blockquote> - Winston S. Churchill.</p>
-                    <div class="container mx-auto">
+                    <div class="container mx-auto" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
                         <h2 class="text-3xl font-semibold mb-6 mt-6">Skills</h2>
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                             <!-- ----------------------------------Skill Set--------------------------------------------- -->
@@ -434,6 +437,9 @@
             </div>
         </div>
     </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <script>
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
@@ -442,7 +448,7 @@
             navMenu.classList.toggle('hidden');
         });
     </script>
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>
